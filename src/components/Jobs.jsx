@@ -132,7 +132,7 @@ export const Card = ({ className, children, icon }) => {
     </div>
   );
 };
-
+  
 export const CardTitle = ({ className, children }) => (
   <h4 className={cn("text-gray-900 font-bold tracking-wide text-lg", className)}>{children}</h4>
 );

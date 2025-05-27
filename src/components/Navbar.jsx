@@ -15,7 +15,7 @@ const navLinks = [
     ]
   },
   { name: "Services", icon: <BriefcaseIcon className="w-5 h-5 mr-2" />, dropdown: ["Product Development", "IT Consulting", "IT Resourcing"] },
-  { name: "Trainings", icon: <AcademicCapIcon className="w-5 h-5 mr-2" />, dropdown: ["Training / Internships", "R  eal Time Internships", "Corporate Training"] },
+  { name: "Trainings", icon: <AcademicCapIcon className="w-5 h-5 mr-2" />, dropdown: ["Training / Internships", "Real Time Internships", "Corporate Training"] },
   { name: "Jobs", icon: <UserGroupIcon className="w-5 h-5 mr-2" />, to: "/jobs" },
   { name: "Support", icon: <LifebuoyIcon className="w-5 h-5 mr-2" />, to: "/support" },
 ];
