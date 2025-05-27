@@ -4,6 +4,22 @@ import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { TechnologyCarousel, MarqueeSlider } from './Portfolio';
 
+
+import qlikview from '../assets/qlikview.png';
+import tableau from '../assets/tableau.jpg';
+import hive from '../assets/hive.jpg';
+import cloudera from '../assets/cloudera.png';
+import informatica from '../assets/informatica.png';
+import sap from '../assets/sap.png';
+import ecommerce from '../assets/ecommerce.jpg';
+import manufacturing from '../assets/manufacturing.png';
+import retail from '../assets/retail.jpg';
+import lifescience from '../assets/lifescience.jpg';
+import insurance from '../assets/insurance.jpg';
+import banking from '../assets/banking.png';
+import logistics from '../assets/logistics.jpg';
+import warehousing from '../assets/warehousing.jpg';
+
 const cn = (...classes) => classes.filter(Boolean).join(" ");
 
 const iconMap = {
@@ -13,23 +29,23 @@ const iconMap = {
 };
 
 const technologyAreas = [
-  { label: "Qlik", image: "../src/assets/qlikview.png" },
-  { label: "Tableau", image: "../src/assets/tableau.jpg" },
-  { label: "Hive", image: "../src/assets/hive.jpg" },
-  { label: "Cloudera", image: "../src/assets/cloudera.png" },
-  { label: "Informatica", image: "../src/assets/informatica.png" },
-  { label: "SAP NetWeaver", image: "./src/assets/sap.png" },
+  { label: "Qlik", image: qlikview },
+  { label: "Tableau", image: tableau },
+  { label: "Hive", image: hive },
+  { label: "Cloudera", image: cloudera },
+  { label: "Informatica", image: informatica },
+  { label: "SAP NetWeaver", image: sap },
 ];
 
 const functionalAreas = [
-  { label: "E-commerce", image: "../src/assets/ecommerce.jpg" },
-  { label: "Manufacturing", image: "../src/assets/manufacturing.png" },
-  { label: "Retail", image: "../src/assets/retail.jpg" },
-  { label: "Life Science", image: "../src/assets/lifescience.jpg" },
-  { label: "Insurance", image: "./src/assets/insurance.jpg" },
-  { label: "Banking", image: "./src/assets/banking.png" },
-  { label: "Logistics", image: "./src/assets/logistics.jpg" },
-  { label: "Effective Warehousing", image: "./src/assets/warehousing.jpg" },
+  { label: "E-commerce", image: ecommerce },
+  { label: "Manufacturing", image: manufacturing },
+  { label: "Retail", image: retail },
+  { label: "Life Science", image: lifescience },
+  { label: "Insurance", image: insurance },
+  { label: "Banking", image: banking },
+  { label: "Logistics", image: logistics },
+  { label: "Effective Warehousing", image: warehousing },
 ];
 
 export const HoverEffect = ({ items, className }) => {
