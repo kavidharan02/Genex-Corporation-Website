@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HomeIcon, BriefcaseIcon, AcademicCapIcon, UserGroupIcon, LifebuoyIcon } from "@heroicons/react/24/outline";
 import { FaHome } from "react-icons/fa";
+import logo from '../assets/logo.png';
 
 const navLinks = [
   {
@@ -29,7 +30,7 @@ export default function Navbar() {
         {/* Logo and Brand */}
         <Link to="/" className="flex items-center -ml-16 hover:opacity-80 transition">
           <img
-            src="/public/images/logo.png"
+            src={logo}
             alt="Genex Corp Logo"
             className="h-15 w-auto object-contain"
             style={{ minWidth: "64px" }}

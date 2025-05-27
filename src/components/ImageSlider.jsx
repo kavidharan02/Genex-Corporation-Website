@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import home1 from '../assets/home1.jpg';
+import home2 from '../assets/home2.jpg';
+import home3 from '../assets/home3.jpg';
+import home4 from '../assets/home4.jpg';
 
 const images = [
   {
-    url: '/public/images/home1.jpg',
+    url: home1,
     alt: 'Business Technology'
   },
   {
-    url: '/images/home2.jpg',
+    url: home2,
     alt: 'Team Collaboration'
   },
   {
-    url: '/public/images/home3.jpg',
+    url: home3,
     alt: 'Digital Innovation'
   },
   {
-    url: '/public/images/home4.jpg',
+    url: home4,
     alt: 'Business Growth'
   }
 ];

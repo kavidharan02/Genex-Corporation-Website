@@ -51,7 +51,7 @@ const MarqueeSlider = ({ items, direction = 'left' }) => {
         ))}
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes scrollLeft {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
