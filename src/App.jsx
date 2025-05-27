@@ -9,7 +9,6 @@ import ProductDevelopment from "./components/ProductDevelopment";
 import OurObjective from "./components/OurObjective";
 import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
-import Support from "./components/Support";
 
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
         <Route path="/product-development" element={<ProductDevelopment />} />
         <Route path="/our-objective" element={<OurObjective />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/support" element={<Support />} />
       </Routes>
       <Footer />
     </>
