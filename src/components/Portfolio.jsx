@@ -173,6 +173,15 @@ const TechnologyCarousel = ({ items }) => {
 export { TechnologyCarousel, MarqueeSlider };
 
 export default function Portfolio() {
+  const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        handleResize(); // initial check
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
   return (
     <div className="relative min-h-screen bg-white pb-12">
       {/* Main Content */}
@@ -187,7 +196,7 @@ export default function Portfolio() {
             Home
           </a>
           <span className="text-gray-400">›</span>
-          <span className="text-gray-700">Our Portfolio</span>
+          <span className="text-gray-700">Portfolio</span>
         </nav>
 
         {/* Header */}
@@ -195,7 +204,7 @@ export default function Portfolio() {
           Converting non-possibilities to possibilities
         </h1>
         <p className="text-center text-xl text-gray-600 max-w-3xl mx-auto mt-2">
-          At GenexCorp, we transform challenges into opportunities and ideas into reality.
+        At GenexCorp, we convert challenges into strategic opportunities and innovative ideas into impactful realities, delivering value-driven solutions with precision and purpose.
         </p>
 
         {/* Technology Section */}
@@ -208,11 +217,15 @@ export default function Portfolio() {
 
         {/* Functional Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-red-500 mb-8 text-center">
-            Functional Consulting Arena
-          </h2>
-          <MarqueeSlider items={functionalAreas} direction="left" />
-        </section>
+                    <h2 className="text-3xl font-bold text-red-500 mb-8 text-center">
+                        Functional Consulting Arena
+                    </h2>
+                    <MarqueeSlider
+                        items={functionalAreas}
+                        direction="right"
+                        speed={isMobile ? 80 : 40} // example: faster speed on mobile
+                    />
+                </section>
 
         {/* Content Section */}
         {/* Add more content here if needed */}

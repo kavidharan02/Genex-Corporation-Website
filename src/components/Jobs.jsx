@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { FaHome, FaBriefcase, FaCloud, FaTools, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { FaHome, FaCloud, FaTools, FaChevronDown, FaChevronUp, FaLaptopCode } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { TechnologyCarousel, MarqueeSlider } from './Portfolio';
@@ -23,7 +23,7 @@ import warehousing from '../assets/warehousing.jpg';
 const cn = (...classes) => classes.filter(Boolean).join(" ");
 
 const iconMap = {
-  "Full Stack Developer": <FaBriefcase className="text-red-500 text-xl" />,
+  "Full Stack Developer": <FaLaptopCode className="text-red-500 text-xl" />,
   "AWS Cloud Engineer": <FaCloud className="text-red-500 text-xl" />,
   "DevOps Engineer": <FaTools className="text-red-500 text-xl" />,
 };
@@ -149,6 +149,15 @@ export const CardDescription = ({ className, children }) => (
 );
 
 export default function Jobs() {
+  const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        handleResize(); // initial check
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
   const jobListings = [
     {
       role: "Full Stack Developer",
@@ -201,11 +210,15 @@ export default function Jobs() {
 
         {/* Functional Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-red-500 mb-8 text-center">
-            Functional Consulting Arena
-          </h2>
-          <MarqueeSlider items={functionalAreas} direction="left" />
-        </section>
+                    <h2 className="text-3xl font-bold text-red-500 mb-8 text-center">
+                        Functional Consulting Arena
+                    </h2>
+                    <MarqueeSlider
+                        items={functionalAreas}
+                        direction="right"
+                        speed={isMobile ? 80 : 40} // example: faster speed on mobile
+                    />
+                </section>
       </div>
     </div>
   );

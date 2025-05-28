@@ -90,10 +90,6 @@ export default function Footer() {
             <img src="/public/images/logo.png" alt="Genex Corp Logo" className="h-8 w-8 mr-3 rounded bg-white p-1 shadow" />
             <span>&copy; {new Date().getFullYear()} <span className="font-semibold">Genex Corp</span>. All rights reserved.</span>
           </div>
-          <div className="space-x-6 text-right w-full md:w-auto">
-            <a href="#" className="hover:underline">Privacy Policy</a>
-            <a href="#" className="hover:underline">Contact</a>
-          </div>
         </div>
       </div>
       {/* Animations */}
